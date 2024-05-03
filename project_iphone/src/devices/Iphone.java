@@ -1,5 +1,7 @@
 package devices;
 
+import java.util.Random;
+
 public class Iphone extends phone implements Browser, Ipod  {
     public void pause(){
         System.out.println("Pause Music");
@@ -18,7 +20,16 @@ public class Iphone extends phone implements Browser, Ipod  {
     }
 
     public void answer() {
-        System.out.println("answer call");
+        Random random = new Random();
+        int answer = random.nextInt() % 2;
+        System.out.println(answer);
+        //if answer
+        if (answer == 0) {
+            System.out.println("answer call");
+        } else {
+            voiceMail();
+        }
+        //else
     }
     public void newPage() {
         System.out.println("New Page Created");
