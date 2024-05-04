@@ -7,7 +7,7 @@ public class Iphone extends phone implements Browser, Ipod  {
         System.out.println("Pause Music");
     }
 
-    public void displayPage(int ip){
+    public void displayPage(String ip){
         System.out.println("page with ip: " + ip);
     }
 
@@ -22,14 +22,11 @@ public class Iphone extends phone implements Browser, Ipod  {
     public void answer() {
         Random random = new Random();
         int answer = random.nextInt() % 2;
-        System.out.println(answer);
-        //if answer
         if (answer == 0) {
             System.out.println("answer call");
         } else {
             voiceMail();
         }
-        //else
     }
     public void newPage() {
         System.out.println("New Page Created");
